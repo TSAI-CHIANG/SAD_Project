@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Final UI for Employee</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - UI for Employee</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Interface</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="product">
+        <!-- 員工登入 -->
+        <div class="info-block" id="login-block">
+            <div class="info-item">
+                <h2 class="info-title" style="margin-left: 20px;">職員登入系統</h2>
+            </div>
+            <div class="info-item">
+                <label for="username" style="margin-left: 55px;">請輸入帳號：</label>
+                <input type="text" id="username" name="username" style="margin-right: 55px;" placeholder="例：10001">
+            </div>
+            <div class="info-item">
+                <label for="password" style="margin-left: 55px;">請輸入密碼：</label>
+                <input type="password" id="password" name="password" style="margin-right: 55px;" placeholder="例：10001">
+            </div>
+            <div class="info-item">
+                <button style="margin-left: 165px;" type="button" onclick="login()">登入</button>
+            </div>
+        </div>
+
+        <!-- 顯示「登入成功！」的畫面 -->
+        <div class="info-block" id="success-block" style="display: none;">
+            <div class="info-item">
+                <h2 class="info-title" style="margin-left: 20px; color: green;">登入成功！</h2>
+            </div>
+            <div class="info-item">
+                <span class="info-title" style="margin-left: 20px;">請輸入要執行的動作：<br>(1)上傳產品檔案 <br> (2)查詢產品資訊<br>(3)驗貨<br>(4)加密產品資訊<br>(5)離開</span>
+                <input type="text" id="verification-code" name="verification-code" style="margin-right: 35px;" placeholder="例:3">
+            </div>
+            <div class="info-item">
+                <button style="margin-left: 165px;" type="button" onclick="showProductIdBlock()">提交</button>
+            </div>
+        </div>
+
+<!-- 輸入 Product ID -->
+<div class="info-block" id="product-id-block" style="display: none;">
+    <div class="info-item" style="margin: 13px;">
+        <span class="info-title" style="margin-left: 10px;">請輸入Product ID：</span>
+        <input type="text" id="product-id" name="product-id" style="margin-right: 50px;" placeholder="例：4000">
+    </div>
+   
+        <button type="button" onclick="submitProductId()" style="margin-bottom: 9px;">確認提交</button>
+        <button type="button" onclick="goBack()">返回</button>
+    
+</div>
+        <!-- 驗貨標準檢驗頁面 -->
+        <div class="info-block inspection-block" id="inspection-block" style= "display: none;">
+            <div class="info-item">
+              <h2 class="info-title" style="margin-left: 6px;">驗貨標準檢驗</h2>
+            </div>
+                    <!-- title -->
+        <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">產品資訊</span>
+            </div>
+        </div>
+        
+        <!-- Product Information -->
+        <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">產品名稱</span>
+                <span class="info-content">Nike Dunk Low</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">產品ID</span>
+                <span class="info-content">4000</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">產品材質</span>
+                <span class="info-content">人造皮革、聚酯纖維</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">製造日期</span>
+                <span class="info-content">2022-12-09</span>               
+            </div>
+           <div class="info-item">
+                <span class="info-title">代理商</span>
+                <span class="info-content">BRS NIKE Taiwan, Inc</span>       
+            </div>
+        </div>
+      <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">真偽識別</span>
+            </div>  
+      </div>
+       <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">識別特徵1：鞋舌字體粗</span>
+        <img src="https://attach.mobile01.com/attach/201412/mobile01-df6fa8b580dbb2e5ec1ea9272b1dc4c6.jpg" alt="鞋舌字體" class="identification-image">
+   </div>
+    </div>
+      <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">識別特徵2：<br>鞋舌LOGO的E不會被遮擋</span>
+       <img src="https://i.imgur.com/a1Qy2LN.jpg" alt="鞋舌" class="identification-image">
+        </div>
+         </div>
+      <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">識別特徵3：鞋孔小</span>
+       <img src="https://i.imgur.com/0CgGPPj.jpg" alt="鞋舌" class="identification-image">
+        </div>
+    </div>
+       <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">識別特徵4：鞋盒磨砂材質</span>
+       <img src="https://i.imgur.com/tGeEhxD.jpg" class="identification-image">
+        </div>
+        </div>
+      <div class="info-block">
+            <div class="info-item">
+                <span class="info-title">識別特徵5：<br>鞋口弧度為V型且不臃腫</span>
+       <img src="https://i.imgur.com/bsbgECT.jpg" class="identification-image">
+        </div>
+      </div>
+          
+<!-- 檢驗結果 -->
+<div class="result-section">
+    <h3 class="info-title">檢驗是否通過？</h3>
+    <label>
+        <input type="radio" id="result1_yes" name="result1" value="Yes" onclick="handleResultSelection('Yes')"> Yes
+        <input type="radio" id="result1_no" name="result1" value="No" onclick="handleResultSelection('No')"> No
+    </label><br>
+</div>
+
+<!-- 識別特徵問題勾選 -->
+<div id="identificationFeaturesSection" style="display: none;">
+    <span style="info-title">請勾選商品描述不符的具體情況：</span>
+    <label>
+        <input type="checkbox" id="feature1" name="features" value="feature1"> 識別特徵1：鞋舌字體粗
+    </label>
+    <label>
+        <input type="checkbox" id="feature2" name="features" value="feature2"> 識別特徵2：鞋舌LOGO的E不會被遮擋
+    </label>
+    <label>
+        <input type="checkbox" id="feature3" name="features" value="feature3"> 識別特徵3：鞋孔小
+    </label>
+    <label>
+        <input type="checkbox" id="feature4" name="features" value="feature4"> 識別特徵4：鞋盒磨砂材質
+    </label>
+    <label>
+        <input type="checkbox" id="feature5" name="features" value="feature5"> 識別特徵5：鞋口弧度為V型且不臃腫
+    </label>
+</div>
+         
+          
+ <!-- 備註 -->
+    <div class="info-item">
+        <span class="info-title">備註</span>
+        <textarea id="remarks" name="remarks" rows="4" cols="50"></textarea>
+    </div>
+
+<!-- 提交驗貨結果按鈕 -->
+
+    <button type="button" onclick="submitInspectionResults()" style="margin: 10px;">提交驗貨結果</button>
+    <button type="button" onclick="goBackToProductId()">返回</button>
+
+</div>
+      
+<!-- 資料上傳成功頁面 -->
+<div class="upload-success-block" id="upload-success-block" style="display: none;">
+    <div class="info-item">
+        <h2 class="info-title" style="color: green;">資料上傳成功！</h2>
+    </div>
+    <div class="info-item">
+        <span class="info-title">請輸入要執行的動作：<br><br>(1)上傳產品檔案 <br> (2)查詢產品資訊<br>(3)驗貨<br>(4)加密產品資訊<br>(5)離開</span>
+        <input type="text" id="upload-action" name="upload-action" style="margin-right: 85px; width: 55px;" placeholder="例：5">
+    </div>
+    <div class="info-item">
+        <button type="button" onclick="showLogoutPage()" style="margin-left: 150px; margin-bottom:20px;">確認</button>
+    </div>
+ </div>
+
+ <!-- 登出成功頁面 -->
+    <div class="info-block" id="logout-success-block" style="display: none;">
+        <div>
+            <h2 style="text-align: center; color:#003C9D;">您已成功登出</h2>
+          <div>
+            <span style="text-align: center; font-size: 12px; margin:15px; color:#003C9D;">若有任何問題，請儘速與主管或相關單位回報</h> </span><br><br>        
+           </div>      
+        </div>
+    </div>
+  
+<script>
+
+        // function login() {
+        //     // 模擬登入成功
+        //     document.getElementById('login-block').style.display = 'none';
+        //     document.getElementById('success-block').style.display = 'block';
+        // }
+
+        // function showProductIdBlock() {
+        //     document.getElementById('success-block').style.display = 'none';
+        //     document.getElementById('product-id-block').style.display = 'block';
+        // }
+
+        // function submitProductId() {
+        //     const productId = document.getElementById('product-id').value;
+        //     // 在這裡處理提交 Product ID 的邏輯，可以跳轉到新的頁面
+        //     document.getElementById('product-id-block').style.display = 'none';
+        //     document.querySelector('.inspection-block').style.display = 'block';
+        //     // 可以在此加入其他相關 HTML 內容
+        // }
+      
+//           function submitInspectionResults() {
+//         // 在這裡處理提交驗貨結果的邏輯
+//         alert('驗貨結果提交成功，進行相應的處理。');
+//     }
+//     function handleResultSelection(result) {
+//         var identificationFeaturesSection = document.getElementById('identificationFeaturesSection');
+
+//         if (result === 'No') {
+//             // 顯示識別特徵欄位
+//             identificationFeaturesSection.style.display = 'block';
+//         } else {
+//             // 隱藏識別特徵欄位
+//             identificationFeaturesSection.style.display = 'none';
+//         }
+//     }
+ 
+//     function goBack() {
+//         document.getElementById('product-id-block').style.display = 'none';
+//         document.getElementById('success-block').style.display = 'block';
+//     }
+      
+//     function goBackToProductId() {
+//         document.getElementById('inspection-block').style.display = 'none';
+//        document.getElementById('product-id-block').style.display = 'block';
+// }
+
+//     function submitInspectionResults() {
+//             // 在這裡處理提交驗貨結果的邏輯
+//          // alert('驗貨結果提交成功，進行相應的處理。');
+
+//             // 切換頁面顯示資料上傳成功
+//          document.getElementById('inspection-block').style.display = 'none';
+//          document.getElementById('upload-success-block').style.display = 'block';
+//         }
+    
+//      function showLogoutPage() {
+//         document.getElementById('upload-success-block').style.display = 'none';
+//         document.getElementById('logout-success-block').style.display = 'block';
+//     }
+      
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

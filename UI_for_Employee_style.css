@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: lightblue;
+}
+
+button{border:0;
+  background-color:#003C9D;
+  color:#fff;
+  border-radius:3px;
+  cursor:pointer;
+  height: 25px}
+
+button:hover{
+  color:#003C9D;
+  background-color:#fff;
+  border:2px #003C9D solid;
+}
+
+input:hover{
+  color:#003C9D;
+  background-color:#fff;
+  border:2px #003C9D solid;
+}
+
+.product {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    font-size: 16px;
+/*     border: 1px solid #ddd; */
+}
+
+
+.app-header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.info-block {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+    text-align: center;
+  
+}
+
+.info-item {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+    margin: 10px 0;
+    
+}
+
+.info-title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.info-content {
+    text-align: right;
+    justify-content: space-between;
+}
+
+.identification-image {
+    margin-left: auto;
+    margin-right: 0; 
+    width: 150px;
+    height: auto;
+}
+
+
+.identification-info {
+    display: flex;
+    align-items: center;
+}
+
+.thick-dark-line {
+  border: none; 
+  height: 2px; 
+  background-color: black;
+}
+
+.regulation{
+    text-align: left;
+ }
+
+label {
+     display: block;
+}
+
+    #identificationFeaturesSection label {
+        display: block;
+        text-align: left; /* 將文字靠左對齊 */
+        margin-left: 35px;
+        
+    }
+
+.verification-block {
+      display: none;
+}
+
+.product-id-block {
+      display: none;
+}
+
+.inspection-block {
+      display: none;
+}
+
+.result-section {
+    text-align: left;
+    margin-left: 10px; /* 調整距離 */
+}
+
+
+.info-item:last-child {
+        margin-top: 25px;
+        /* 調整按鈕與上方的間距，根據需要調整數值 */
+    }
+
+.upload-success-block {
+      display: none;
+      margin-left: 30px;
+      
+  
+  
+        }
